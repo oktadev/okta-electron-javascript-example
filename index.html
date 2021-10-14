@@ -1,0 +1,57 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>A Brief Electron demo with Okta</title>
+</head>
+
+<body>
+    <h1>Electron and Okta</h1>
+
+    <div class="container">
+        <h4>Please Login</h4>
+
+        <div>
+            <label>Username</label>
+            <input type="text" name="username" id="username" />
+
+            <label>Password</label>
+            <input type="password" name="password" id="password" />
+        </div>
+
+        <div>
+            <button id="login-button">Login</button>
+        </div>
+        <div>
+            <label id="error-message"></label>
+        </div>
+
+    </div>
+</body>
+
+<style>
+    .container {
+        width: 60%;
+        margin: 0 auto;
+    }
+</style>
+
+<script>
+    document.querySelector("#login-button").addEventListener("click",() => {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+
+        var data={
+            username: username,
+            password: password,
+        };
+
+        window.electron.requestLogin(data);
+    });
+
+</script>
+
+</html>

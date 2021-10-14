@@ -1,0 +1,16 @@
+<h1>Home</h1>
+
+<div>
+    Congratulations <span id="username">test</span>, You've made it to a secure page using Okta.
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded',() => {
+        window.electron.getUser().then((user) => {
+            document.getElementById("username").innerHTML = `${user.profile.firstName} ${user.profile.lastName}`
+        });
+
+    });
+
+
+</script>
