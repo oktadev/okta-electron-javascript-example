@@ -12,14 +12,12 @@ let user;
 var config = {
   // Required config
   issuer: "https://dev-332742.okta.com/oauth2/default",
-
-  // Required for login flow using getWithRedirect()
   clientId: "0oaa012fi4YN4MMMK357",
 };
 
 var authClient = new OktaAuth(config);
 
-ipcMain.on("request-login", (event, data) => {
+ipcMain.on("user:login", (event, data) => {
   authClient
     .signInWithCredentials(data)
     .then(function (res) {
@@ -35,6 +33,11 @@ ipcMain.on("request-login", (event, data) => {
 
 ipcMain.handle("user:get", (event) => {
   return user;
+});
+
+ipcMain.on("user:logout", (event) => {
+  user = null;
+  openIndex();
 });
 
 function createWindow() {
