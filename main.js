@@ -12,7 +12,7 @@ let user;
 var config = {
   // Required config
   issuer: "https://dev-332742.okta.com/oauth2/default",
-  clientId: "0oaa012fi4YN4MMMK357",
+  clientId: "0oacxyav01fhoiCso357",
 };
 
 var authClient = new OktaAuth(config);
@@ -23,7 +23,7 @@ ipcMain.on("user:login", (event, data) => {
     .then(function (res) {
       console.log(res);
 
-      if (res.transaction.status != "SUCCESS") {
+      if (res.data.status != "SUCCESS") {
         event.reply("login-failed", err.errorSummary);
         return;
       }
