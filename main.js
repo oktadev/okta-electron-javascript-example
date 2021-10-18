@@ -22,6 +22,12 @@ ipcMain.on("user:login", (event, data) => {
     .signInWithCredentials(data)
     .then(function (res) {
       console.log(res);
+
+      if (res.transaction.status != "SUCCESS") {
+        event.reply("login-failed", err.errorSummary);
+        return;
+      }
+
       user = res.user;
       openHome();
     })
