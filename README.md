@@ -1,6 +1,6 @@
 # Electron Demo
 
-This repository shows you how to use Okta in an Electron application. Please read [React Routing][blog] to see how it was created.
+This repository shows you how to use Okta in an Electron application. Please read [Electron Okta SDK][blog] to see how it was created.
 
 **Prerequisites:**
 
