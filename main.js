@@ -11,8 +11,8 @@ let user;
 
 var config = {
   // Required config
-  issuer: "https://dev-332742.okta.com/oauth2/default",
-  clientId: "0oacxyav01fhoiCso357",
+  issuer: "{yourOktaDomain}/oauth2/default",
+  clientId: "{yourClientId}",
 };
 
 var authClient = new OktaAuth(config);
