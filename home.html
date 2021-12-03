@@ -1,23 +1,21 @@
 <h1>Home</h1>
 
 <div>
-    Congratulations <span id="username">test</span>, You've made it to a secure page using Okta.
+  Congratulations <span id="username">test</span>, You've made it to a secure page using Okta.
 </div>
 
 <div>
-    <button id="logout-button">Logout</button>
+  <button id="logout-button">Logout</button>
 </div>
 
 <script>
-    window.addEventListener('DOMContentLoaded',() => {
-        window.electron.getUser().then((user) => {
-            document.getElementById("username").innerHTML = `${user.profile.firstName} ${user.profile.lastName}`
-        });
+  window.addEventListener('DOMContentLoaded', () => {
+    window.electron.getUser().then((user) => {
+      document.getElementById("username").innerHTML = `${user.profile.firstName} ${user.profile.lastName}`
     });
+  });
 
-    document.getElementById('logout-button').addEventListener('click', () =>{
-        window.electron.logout();
-    })
-
-
+  document.getElementById('logout-button').addEventListener('click', () => {
+    window.electron.logout();
+  });
 </script>

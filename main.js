@@ -1,5 +1,3 @@
-// main.js
-
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const OktaAuth = require("@okta/okta-auth-js").OktaAuth;
@@ -11,8 +9,8 @@ let user;
 
 var config = {
   // Required config
-  issuer: "{yourOktaDomain}/oauth2/default",
-  clientId: "{yourClientId}",
+  issuer: "https://dev-2530788.okta.com/oauth2/default",
+  clientId: "0oa2x93dgdVafefPF5d7",
 };
 
 var authClient = new OktaAuth(config);
@@ -60,7 +58,7 @@ function openIndex() {
   mainWindow.loadFile("index.html");
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 }
 
 function openHome() {
