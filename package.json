@@ -1,19 +1,19 @@
 {
-  "name": "electron_demo",
+  "name": "electron",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^15.1.2"
+    "electron": "^16.0.3"
   },
   "dependencies": {
-    "@okta/okta-auth-js": "^5.5.0"
+    "@okta/okta-auth-js": "^5.8.0"
   },
   "configurations": [
     {
