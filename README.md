@@ -1,6 +1,6 @@
-# Electron Demo
+# Electron Example
 
-This repository shows you how to use Okta in an Electron application. Please read [Electron Okta SDK][blog] to see how it was created.
+This repository shows you how to use Okta in an Electron application. Please read [Build an Electron App with JavaScript and Authentication][blog] to see how it was created.
 
 **Prerequisites:**
 
@@ -20,8 +20,8 @@ This repository shows you how to use Okta in an Electron application. Please rea
 To run this example, run the following commands:
 
 ```bash
-git clone https://github.com/nickolasfisher/Okta_ElectronDemo/new/master?readme=1
-cd Okta_ElectronDemo
+git clone https://github.com/oktadev/okta-electron-javascript-example.git
+cd okta-electron-javascript-example
 ```
 
 ### Create an OIDC Application in Okta
@@ -47,7 +47,7 @@ The application configuration will be printed to your screen:
 
 ```shell
 Okta application configuration:
-Issuer:    {yourOktaDomain}/oauth2/default
+Issuer:    https://{yourOktaDomain}/oauth2/default
 Client ID: {yourClientId}
 ```
 If you haven't done so already, install the dependencies.
@@ -79,4 +79,4 @@ Please post any questions as comments on the [blog post][blog], or visit our [Ok
 
 Apache 2.0, see [LICENSE](LICENSE).
 
-[blog]: https://developer.okta.com/blog/2021/xyz
+[blog]: https://developer.okta.com/blog/2021/12/07/electron-javascript
